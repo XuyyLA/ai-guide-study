@@ -1,0 +1,45 @@
+# HuggingFace model cache
+cache/
+**/cache/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Model weights & checkpoints (large files)
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+*.gguf
+*.ggml
+
+# Training outputs
+output/
+runs/
+wandb/
+
+# OpenAI cache
+openai_cache/
+
+# Environment
+.env
+
+# Embedded git repos (reference repos, not submodules)
+**/GenAI-Hw5/

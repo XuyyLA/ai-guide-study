@@ -23,7 +23,33 @@ os.environ['HF_HOME'] = 'C:/hf_cache'
 - `02-Gradio应用搭建/` - Gradio 构建 AI 应用（摘要、角色扮演、定制化任务）
 - `03-Prompt优化解题/` - 自定义 Prompt 评估数学题准确率
 - `04-HuggingFace-AutoModel/` - HuggingFace AutoModel 各任务示例
+- `05-部署语言模型/` - 本地部署 distilgpt2 并封装为 API 服务（FastAPI / Flask）
+- `06-微调LLM写唐诗/` - LoRA 微调 Qwen2.5-0.5B-Instruct 让它学会写唐诗（4-bit 量化 + SFTTrainer）**⚠️ 待GPU环境运行**
+- `07-BeamSearch/` - Beam Search 算法原理演示 + distilgpt2 不同束宽对比
 - `学习归档/` - 每次对话的详细记录，按日期命名
+
+## 项目目录与 Guide 文档对应关系
+
+项目文件夹编号与参考文档（`D:\LA\资料\AI-Guide-and-Demos-zh_CN\Guide\`）的对应：
+
+| 项目目录 | Guide 文档 | 说明 |
+|---------|-----------|------|
+| `01-LLM基础对话/` | `01. 初识 LLM API：环境配置与多轮对话演示.md` | 智谱 API 调用 |
+| `02-Gradio应用搭建/` | `02. 简单入门：通过 API 与 Gradio 构建 AI 应用.md` | Gradio 应用 |
+| `03-Prompt优化解题/` | `03. 进阶指南：自定义 Prompt 提升大模型解题能力.md` | Prompt 优化 |
+| `04-HuggingFace-AutoModel/` | `05. 理解 Hugging Face 的 AutoModel 系列.md` | AutoModel 各任务 |
+| `05-部署语言模型/` | `06. 开始实践：部署你的第一个语言模型.md` | 模型部署 |
+| `06-微调LLM写唐诗/` | `08. 尝试微调 LLM：让它会写唐诗.md` | LoRA 微调 ⚠️ 待GPU |
+| `07-BeamSearch/` | `09. 深入理解 Beam Search.md` | Beam Search 原理与对比 |
+
+> 注意：Guide 文档编号 04（LoRA 认识）、07（模型参数与显存）未单独建目录，项目编号与 Guide 编号不是 1:1 对应。
+
+## 模型选择规则
+
+后续涉及开源 LLM 的练习统一使用 **Qwen** 系列模型，优先级：Qwen > DeepSeek > GLM > 其他。
+- 默认模型：`Qwen/Qwen2.5-0.5B-Instruct`（CPU 可跑，7B 需 GPU）
+- Prompt 格式：使用 Qwen 的 ChatML 格式（`tokenizer.apply_chat_template`），不使用 Llama 的 `[INST]` 格式
+- 输出语言：简体中文
 
 ## Python 环境
 

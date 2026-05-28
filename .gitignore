@@ -40,6 +40,3 @@ openai_cache/
 
 # Environment
 .env
-
-# Embedded git repos (reference repos, not submodules)
-**/GenAI-Hw5/

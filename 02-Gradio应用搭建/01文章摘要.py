@@ -16,7 +16,7 @@ PROMPT_FOR_SUMMARIZATION = "请将以下文章概括成几句话。"
 
 
 def reset():
-    """清空对话记录"""
+    """清空对话记录1"""
     return []
 
 

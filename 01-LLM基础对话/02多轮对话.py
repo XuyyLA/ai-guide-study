@@ -4,7 +4,7 @@ from config import Config
 client = Config.get_client()
 
 # 初始化对话历史
-messages = [{"role": "system", "content": "You are a helpful assistant."}]
+messages = [{"role": "system", "content": "You are a helpful assistant. Today is 2026/06/03."}]
 
 # 进行多轮对话，当前为3轮
 for i in range(3):

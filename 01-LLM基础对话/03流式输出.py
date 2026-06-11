@@ -7,8 +7,8 @@ client = Config.get_client()
 response = client.chat.completions.create(
     model=Config.MODEL,
     messages=[
-        {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": "你是谁？回答前称呼我为Luxa"}
+        {"role": "system", "content": "You are a helpful assistant. 你叫 Luxa Bot 。回答前称呼我为Luxa"},
+        {"role": "user", "content": "你是谁？"}
     ],
     stream=True,
 )
